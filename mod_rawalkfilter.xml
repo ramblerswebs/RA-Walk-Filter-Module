@@ -9,9 +9,6 @@
     <authorUrl>www.ramblers-webs.org.uk</authorUrl>
     <version>1.0.0</version>
     <description>This module enables the filtering of walks</description>
-    <updateservers>
-        <server type="extension" name="Ramblers Walk Filter Module" priority="1">https://raw.githubusercontent.com/ramblerswebs/updates/master/updates/rawalkfilter.xml</server>
-    </updateservers>
     <files>
         <filename >mod_rawalkfilter.php</filename>
         <folder module="mod_rawalkfinter">tmpl</folder>
