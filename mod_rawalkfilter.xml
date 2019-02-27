@@ -11,7 +11,7 @@
     <description>This module enables the filtering of walks</description>
     <files>
         <filename >mod_rawalkfilter.php</filename>
-        <folder module="mod_rawalkfinter">tmpl</folder>
+        <folder module="mod_rawalkfilter">tmpl</folder>
         <filename>index.html</filename>
         <filename>en-GB.mod_rawalkfilter.ini</filename>
     </files>
