@@ -13,5 +13,5 @@ defined( "_JEXEC" ) or die( "Restricted access" );
 
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
 
-require(JModuleHelper::getLayoutPath('mod_rawalkfilter', $params->get('layout', 'default')));
+require(JModuleHelper::getLayoutPath('mod_rawalkfilter', $params->get('layout', 'default'))); 
 

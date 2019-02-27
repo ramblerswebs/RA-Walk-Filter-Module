@@ -15,7 +15,6 @@
     <files>
         <filename >mod_rawalkfilter.php</filename>
         <folder module="mod_rawalkfinter">tmpl</folder>
-        <folder>css</folder>
         <filename>index.html</filename>
         <filename>en-GB.mod_rawalkfilter.ini</filename>
     </files>
