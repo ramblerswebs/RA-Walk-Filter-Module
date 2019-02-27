@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+    <name>RA Walkfilter</name>
+    <author>Chris Vaughan Derby and South Derbyshire</author>
+    <creationDate>17 January 2019</creationDate>
+    <copyright>Copyright (C) 2019 Ramblers-webs.org.uk</copyright>
+    <license>This extension in released under the GNU/GPL License</license>
+    <authorEmail>webmaster@ramblers-webs.org.uk</authorEmail>
+    <authorUrl>www.ramblers-webs.org.uk</authorUrl>
+    <version>1.0.0</version>
+    <description>This module enable the filtering of walks</description>
+    <updateservers>
+        <server type="extension" name="Ramblers Walk Filter Module" priority="1">https://raw.githubusercontent.com/ramblerswebs/updates/master/updates/rawalkfilter.xml</server>
+    </updateservers>
+    <files>
+        <filename >mod_rawalkfilter.php</filename>
+        <folder module="mod_rawalkfinter">tmpl</folder>
+        <folder>css</folder>
+        <filename>index.html</filename>
+        <filename>en-GB.mod_rawalkfilter.ini</filename>
+    </files>
+    <languages folder="langfiles">
+        <language tag="en-GB">en-GB.mod_rawalkfilter.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="Table" type="checkbox" label="Allow Table dispay" description="Allow Table Format" value="1" checked="1" />
+                <field name="List" type="checkbox" label="Allow List display" description="Allow List Format" value="1" checked="1" />
+                <field name="Map" type="checkbox" label="Allow Map display"  description="Allow Map display" value="1" checked="1" />
+             </fieldset>
+      
+            <fieldset name="advanced">
+                <field
+                    name="moduleclass_sfx"
+                    type="textarea"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+                    rows="3"
+                />           
+            </fieldset>
+        </fields>
+    </config>
+</extension>
