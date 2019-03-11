@@ -21,11 +21,65 @@
     <config>
         <fields name="params">
             <fieldset name="basic">
-                <field name="Table" type="checkbox" label="Allow Table dispay" description="Allow Table Format" value="1" checked="1" />
-                <field name="List" type="checkbox" label="Allow List display" description="Allow List Format" value="1" checked="1" />
-                <field name="Map" type="checkbox" label="Allow Map display"  description="Allow Map display" value="1" checked="1" />
-             </fieldset>
-      
+                <field name="Grades" type="checkbox" label="Allow Grades display" description="Allow Grades Format" value="1"  />
+                <field name="Table" type="checkbox" label="Allow Table display" description="Allow Table Format" value="1"  />
+                <field name="List" type="checkbox" label="Allow List display" description="Allow List Format" value="1"  />
+                <field name="Map" type="checkbox" label="Allow Map display"  description="Allow Map display" value="1"  />
+                <field name="Leaders" type="checkbox" label="Allow Contacts List"  description="Allow display of Contacts" value="1" />
+                <field name="defaultOption" type="combo" default="OptionGrades" label="Default display" description="Default display" size="10">
+                    <option value="OptionGrades">Grades</option>
+                    <option value="OptionTable">Table</option>
+                    <option value="OptionList">List</option>
+                    <option value="OptionMap">Map</option>
+                    <option value="OptionLeaders">Leaders</option>
+                </field>              
+                <field name="diagnostics" type="radio" default="1" label="Display diagnostic information">
+                    <option value="1">Yes</option> 
+                    <option value="0">No</option>
+                </field>
+            </fieldset> 
+            <fieldset name="GradesLayout">       
+                <field name="note01" type="note" label="Definition of Grades layout" />
+                <field name="GradesFormat" type="text" default="" size="400" label="Grades layout format" description="Grades layout format" />
+            </fieldset>
+            <fieldset name="TableLayout">       
+                <field name="note01" type="note" label="Definition of Table layout" />
+                <field name="Col1Head" type="text"  size="100" label="Column 1 Heading" description="Column 1 Heading" />
+                <field name="Col1" type="text" default="" size="100" label="Column 1 Content" description="Column 1 Content" />
+                <field name="Col2Head" type="text"  size="100" label="Column 2 Heading" description="Column 2 Heading" />
+                <field name="Col2" type="text" default="" size="100" label="Column 2 Content" description="Column 2 Content" />
+                <field name="Col3Head" type="text"  size="100" label="Column 3 Heading" description="Column 3 Heading" />
+                <field name="Col3" type="text" default="" size="100" label="Column 3 Content" description="Column 3 Content" />
+                <field name="Col4Head" type="text"  size="100" label="Column 4 Heading" description="Column 4 Heading" />
+                <field name="Col4" type="text" default="" size="100" label="Column 4 Content" description="Column 4 Content" />
+                <field name="Col5Head" type="text"  size="100" label="Column 5 Heading" description="Column 5 Heading" />
+                <field name="Col5" type="text" default="" size="100" label="Column 5 Content" description="Column 5 Content" />
+                <field name="Col6Head" type="text"  size="100" label="Column 6 Heading" description="Column 6 Heading" />
+                <field name="Col6" type="text" default="" size="100" label="Column 6 Content" description="Column 6 Content" />
+                <field name="Col7Head" type="text"  size="100" label="Column 7 Heading" description="Column 7 Heading" />
+                <field name="Col7" type="text" default="" size="100" label="Column 7 Content" description="Column 7 Content" />
+                <field name="Col8Head" type="text"  size="100" label="Column 8 Heading" description="Column 8 Heading" />
+                <field name="Col8" type="text" default="" size="100" label="Column 8 Content" description="Column 8 Content" />
+                <field name="Col9Head" type="text"  size="100" label="Column 9 Heading" description="Column 9 Heading" />
+                <field name="Col9" type="text"  size="100" label="Column 9 Content" description="Column 9 Content" />
+            </fieldset>
+            <fieldset name="ListLayout">       
+                <field name="note01" type="note" label="Definition of List layout" />
+                <field name="ListFormat" type="text" default="" size="400" label="List layout format" description="List layout format" />
+            </fieldset>
+            <fieldset name="Instructions">       
+                <field name="note01" type="note" label="Definition of layout terms" />
+                <field name="note02" type="note" label="{dd} - e.g  Wednesday 4th" />
+                <field name="note03" type="note" label="{ddmmyyyy} - e.g  Wednesday 4th May" />
+                <field name="note04" type="note" label="{ddmmyyyy} - e.g   Wednesday 4th May 2019" />
+                <field name="note05" type="note" label="{ddmmyyyy} - e.g" />
+                <field name="note06" type="note" label="Definition of Table layout" />
+                <field name="note07" type="note" label="Definition of Table layout" />
+                <field name="note11" type="note" label="Include a conditional item before a variable, it is only displayed if the field exists" />
+                <field name="note08" type="note" label="Use ,  to add ', ' e.g. {,meet} gives ', 9:45 at Somewhere' or blank" />
+                <field name="note09" type="note" label="Use ;  to add a new line e.g. {;ddmmyyyy} will display the date on the next line" />
+                <field name="note10" type="note" label="Add a new string before  e.g. {;Walk date is  ddmmyyyy} will display 'Walk date is Wednesday 4th May 2019' on the next line" />
+            </fieldset>
             <fieldset name="advanced">
                 <field
                     name="moduleclass_sfx"
