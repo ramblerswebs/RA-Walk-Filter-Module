@@ -26,12 +26,12 @@
                 <field name="List" type="checkbox" label="Allow List display" description="Allow List Format" value="1"  />
                 <field name="Map" type="checkbox" label="Allow Map display"  description="Allow Map display" value="1"  />
                 <field name="Leaders" type="checkbox" label="Allow Contacts List"  description="Allow display of Contacts" value="1" />
-                <field name="defaultOption" type="combo" default="OptionGrades" label="Default display" description="Default display" size="10">
-                    <option value="OptionGrades">Grades</option>
-                    <option value="OptionTable">Table</option>
-                    <option value="OptionList">List</option>
-                    <option value="OptionMap">Map</option>
-                    <option value="OptionLeaders">Leaders</option>
+                <field name="defaultOption" type="combo" default="Grades" label="Default display" description="Default display" size="10">
+                    <option value="Grades">Grades</option>
+                    <option value="Table">Table</option>
+                    <option value="List">List</option>
+                    <option value="Map">Map</option>
+                    <option value="Leaders">Leaders</option>
                 </field>              
                 <field name="diagnostics" type="radio" default="1" label="Display diagnostic information">
                     <option value="1">Yes</option> 
@@ -45,23 +45,23 @@
             <fieldset name="TableLayout">       
                 <field name="note01" type="note" label="Definition of Table layout" />
                 <field name="Col1Head" type="text"  size="100" label="Column 1 Heading" description="Column 1 Heading" />
-                <field name="Col1" type="text" default="" size="100" label="Column 1 Content" description="Column 1 Content" />
+                <field name="Col1" type="text" default="" size="100" label="Column 1 Content" description="Column 1 Content" filter="raw" />
                 <field name="Col2Head" type="text"  size="100" label="Column 2 Heading" description="Column 2 Heading" />
-                <field name="Col2" type="text" default="" size="100" label="Column 2 Content" description="Column 2 Content" />
+                <field name="Col2" type="text" default="" size="100" label="Column 2 Content" description="Column 2 Content" filter="raw" />
                 <field name="Col3Head" type="text"  size="100" label="Column 3 Heading" description="Column 3 Heading" />
-                <field name="Col3" type="text" default="" size="100" label="Column 3 Content" description="Column 3 Content" />
+                <field name="Col3" type="text" default="" size="100" label="Column 3 Content" description="Column 3 Content"  filter="raw" />
                 <field name="Col4Head" type="text"  size="100" label="Column 4 Heading" description="Column 4 Heading" />
-                <field name="Col4" type="text" default="" size="100" label="Column 4 Content" description="Column 4 Content" />
+                <field name="Col4" type="text" default="" size="100" label="Column 4 Content" description="Column 4 Content"  filter="raw" />
                 <field name="Col5Head" type="text"  size="100" label="Column 5 Heading" description="Column 5 Heading" />
-                <field name="Col5" type="text" default="" size="100" label="Column 5 Content" description="Column 5 Content" />
+                <field name="Col5" type="text" default="" size="100" label="Column 5 Content" description="Column 5 Content"  filter="raw" />
                 <field name="Col6Head" type="text"  size="100" label="Column 6 Heading" description="Column 6 Heading" />
-                <field name="Col6" type="text" default="" size="100" label="Column 6 Content" description="Column 6 Content" />
+                <field name="Col6" type="text" default="" size="100" label="Column 6 Content" description="Column 6 Content"  filter="raw" />
                 <field name="Col7Head" type="text"  size="100" label="Column 7 Heading" description="Column 7 Heading" />
-                <field name="Col7" type="text" default="" size="100" label="Column 7 Content" description="Column 7 Content" />
+                <field name="Col7" type="text" default="" size="100" label="Column 7 Content" description="Column 7 Content"  filter="raw" />
                 <field name="Col8Head" type="text"  size="100" label="Column 8 Heading" description="Column 8 Heading" />
-                <field name="Col8" type="text" default="" size="100" label="Column 8 Content" description="Column 8 Content" />
+                <field name="Col8" type="text" default="" size="100" label="Column 8 Content" description="Column 8 Content"  filter="raw" />
                 <field name="Col9Head" type="text"  size="100" label="Column 9 Heading" description="Column 9 Heading" />
-                <field name="Col9" type="text"  size="100" label="Column 9 Content" description="Column 9 Content" />
+                <field name="Col9" type="text" default="" size="100" label="Column 9 Content" description="Column 9 Content"  filter="raw" />
             </fieldset>
             <fieldset name="ListLayout">       
                 <field name="note01" type="note" label="Definition of List layout" />
