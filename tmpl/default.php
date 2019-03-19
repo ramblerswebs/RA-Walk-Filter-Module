@@ -41,19 +41,19 @@ if ($select) {
     echo "<div id='raDisplayOptions'>";
     echo "<table><tr>";
     if ($grades) {
-        RaDisplayOption("Grades", "OptionGrades");
+        RaDisplayOption("Grades", "Grades");
     }
     if ($table) {
-        RaDisplayOption("Table", "OptionTable");
+        RaDisplayOption("Table", "Table");
     }
     if ($list) {
-        RaDisplayOption("List", "OptionList");
+        RaDisplayOption("List", "List");
     }
     if ($map) {
-        RaDisplayOption("Map", "OptionMap");
+        RaDisplayOption("Map", "Map");
     }
     if ($leaders) {
-        RaDisplayOption("Contacts", "OptionContacts");
+        RaDisplayOption("Contacts", "Contacts");
     }
     echo "</tr></table></div>";
 }
