@@ -1,13 +1,14 @@
 
 <div id="ra_groups"></div>
 
-<h3 class="ra_openclose">Dates</h3>
+<h3 class="ra_openclose">Dates<span class="ra-closed"></span></h3>
 <div id="ra_filter_dates" class="ra_filter" style="display:none;">
     <span><label>Start Date</label><input id="RA_DateStart" type="date" onchange="javascript:ra_filter(event)"  /></span>
     <span><label>End Date</label><input id="RA_DateEnd" type="date" onchange="javascript:ra_filter(event)"  /></span>
+    
 </div>
 
-<h3 class="ra_openclose">Day of the week</h3>
+<h3 class="ra_openclose">Day of the week<span class="ra-closed"></span></h3>
 <ul id="ra_filter_dow" class="ra_filter" style="display:none;">
     <li><input id="RA_DayOfWeek_0" type="checkbox" onchange="javascript:ra_filter(event)"  /><label>Monday</label></li>
     <li><input id="RA_DayOfWeek_1" type="checkbox" onchange="javascript:ra_filter(event)"  /><label>Tuesday</label></li>
@@ -18,7 +19,7 @@
     <li><input id="RA_DayOfWeek_6" type="checkbox" onchange="javascript:ra_filter(event)"  /><label>Sunday</label></li>   
 </ul>
 
-<h3 class="ra_openclose">Distance</h3>
+<h3 class="ra_openclose">Distance<span class="ra-closed"></span></h3>
 <ul id="ra_filter_distance" class="ra_filter" style="display:none;">
     <li><input id="RA_Dist_0" type="checkbox" onchange="javascript:ra_filter(event)"  /><label>Up to 3 miles (5 km)</label></li>
     <li><input id="RA_Dist_1" type="checkbox" onchange="javascript:ra_filter(event)"  /><label>3+ to 5 miles (5-8 km)</label></li>
@@ -29,7 +30,7 @@
     <li><input id="RA_Dist_6" type="checkbox" onchange="javascript:ra_filter(event)"  /><label>15+ miles (24 km)</label></li>
 </ul>
 
-<h3 class="ra_openclose">Grade</h3>
+<h3 class="ra_openclose">Grade<span class="ra-closed"></span></h3>
 <ul id="ra_filter_difficulty" class="ra_filter" style="display:none;">
     <li><input id="RA_Diff_ea" type="checkbox" onchange="javascript:ra_filter(event)"  /><label><span class='pointer' class='pointer' onclick='javascript:dGH()'>Easy Access</label></span></li>
     <li><input id="RA_Diff_e" type="checkbox" onchange="javascript:ra_filter(event)"  /><label><span class='pointer' class='pointer' onclick='javascript:dGH()'>Easy</label></span></li>
@@ -38,5 +39,3 @@
     <li><input id="RA_Diff_s" type="checkbox" onchange="javascript:ra_filter(event)"  /><label><span class='pointer' class='pointer' onclick='javascript:dGH()'>Strenuous</label></span></li>
     <li><input id="RA_Diff_t" type="checkbox" onchange="javascript:ra_filter(event)"  /><label><span class='pointer' class='pointer' onclick='javascript:dGH()'>Technical</label></span></li>
 </ul>
-
-<div id="ra_groups"></div>
