@@ -36,10 +36,34 @@ if ($list) {
 if ($map) {
     $select = true;
 }
+switch ($default) {
+    case "Grades":
+        $grades = false;
+        break;
+    case "Table":
+        $table = false;
+        break;
+    case "List":
+        $list = false;
+        break;
+    case "Map":
+        $map = false;
+        break;
+    case "Leaders":
+        $leaders = false;
+        break;
+
+
+        break;
+
+    default:
+        break;
+}
 
 if ($select) {
     echo "<div id='raDisplayOptions'>";
     echo "<table><tr>";
+    RaDisplayOption($default, $default);
     if ($grades) {
         RaDisplayOption("Grades", "Grades");
     }
@@ -72,7 +96,7 @@ foreach ($colheaders as $colheader) {
     $i+=1;
 }
 $out = "";
-$out.="ramblerswalksDetails.displayDefault='".$default."';";
+$out.="ramblerswalksDetails.displayDefault='" . $default . "';";
 if (count($items) > 0) {
     $out.= "ramblerswalksDetails.tableFormat='" . addslashes(json_encode($items)) . "';";
 }
@@ -87,7 +111,7 @@ $document = JFactory::getDocument();
 $document->addScriptDeclaration("  function addFilterFormats() {" . $out . "};", "text/javascript");
 
 function RaDisplayOption($title, $value) {
-    echo "<td id='" . $value . "' onclick=\"javascript:ra_format('" . $value . "')\">" . $title . "</td>";
+    echo "<td class='ra-tab' id='" . $value . "' onclick=\"javascript:ra_format('" . $value . "')\">" . $title . "</td>";
 }
 
 function RaProcessItem($value) {
