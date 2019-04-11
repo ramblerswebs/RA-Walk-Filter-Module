@@ -9,6 +9,9 @@
     <authorUrl>www.ramblers-webs.org.uk</authorUrl>
     <version>1.0.0</version>
     <description>This module enables the filtering of walks</description>
+     <updateservers>
+        <server type="extension" name="Ramblers Walks Filter Module" priority="1">https://raw.githubusercontent.com/ramblerswebs/updates/master/updates/rafiltermodule.xml</server>
+    </updateservers>
     <files>
         <filename >mod_rawalkfilter.php</filename>
         <folder module="mod_rawalkfilter">tmpl</folder>
@@ -21,13 +24,13 @@
     <config>
         <fields name="params">
             <fieldset name="basic">
-                <field name="Grades" type="checkbox" label="Allow Grades display" description="Allow Grades Format" value="1"  />
+                <field name="Details" type="checkbox" label="Allow Details display" description="Allow Details Format" value="1"  />
                 <field name="Table" type="checkbox" label="Allow Table display" description="Allow Table Format" value="1"  />
                 <field name="List" type="checkbox" label="Allow List display" description="Allow List Format" value="1"  />
                 <field name="Map" type="checkbox" label="Allow Map display"  description="Allow Map display" value="1"  />
                 <field name="Leaders" type="checkbox" label="Allow Contacts List"  description="Allow display of Contacts" value="1" />
-                <field name="defaultOption" type="combo" default="Grades" label="Default display" description="Default display" size="10">
-                    <option value="Grades">Grades</option>
+                <field name="defaultOption" type="combo" default="Details" label="Default display" description="Default display" size="10">
+                    <option value="Details">Details</option>
                     <option value="Table">Table</option>
                     <option value="List">List</option>
                     <option value="Map">Map</option>
@@ -38,9 +41,9 @@
                     <option value="0">No</option>
                 </field>
             </fieldset> 
-            <fieldset name="GradesLayout">       
-                <field name="note01" type="note" label="Definition of Grades layout" />
-                <field name="GradesFormat" type="text" default="" size="400" label="Grades layout format" description="Grades layout format" />
+            <fieldset name="DetailsLayout">       
+                <field name="note01" type="note" label="Definition of Details layout" />
+                <field name="DetailsFormat" type="text" default="" size="400" label="Details layout format" description="Details layout format" />
             </fieldset>
             <fieldset name="TableLayout">       
                 <field name="note01" type="note" label="Definition of Table layout" />

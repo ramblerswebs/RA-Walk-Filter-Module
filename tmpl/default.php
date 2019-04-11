@@ -18,13 +18,13 @@ $filterhtml = file_get_contents("modules/mod_rawalkfilter/tmpl/filter.html");
 echo $filterhtml;
 
 $default = $params->get('defaultOption');
-$grades = $params->get('Grades');
+$details = $params->get('Details');
 $table = $params->get('Table');
 $list = $params->get('List');
 $map = $params->get('Map');
 $leaders = $params->get('Leaders');
 $select = false;
-if ($grades) {
+if ($details) {
     $select = true;
 }
 if ($table) {
@@ -37,8 +37,8 @@ if ($map) {
     $select = true;
 }
 switch ($default) {
-    case "Grades":
-        $grades = false;
+    case "Details":
+        $details = false;
         break;
     case "Table":
         $table = false;
@@ -64,8 +64,8 @@ if ($select) {
     echo "<div id='raDisplayOptions'>";
     echo "<table><tr>";
     RaDisplayOption($default, $default);
-    if ($grades) {
-        RaDisplayOption("Grades", "Grades");
+    if ($details) {
+        RaDisplayOption("Details", "Details");
     }
     if ($table) {
         RaDisplayOption("Table", "Table");
