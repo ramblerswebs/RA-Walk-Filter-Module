@@ -7,7 +7,7 @@
     <license>This extension in released under the GNU/GPL License</license>
     <authorEmail>webmaster@ramblers-webs.org.uk</authorEmail>
     <authorUrl>www.ramblers-webs.org.uk</authorUrl>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <description>This module enables the filtering of walks</description>
      <updateservers>
         <server type="extension" name="Ramblers Walks Filter Module" priority="1">https://raw.githubusercontent.com/ramblerswebs/updates/master/updates/rafiltermodule.xml</server>
