@@ -2,12 +2,12 @@
 <extension type="module" version="3.0" client="site" method="upgrade">
     <name>RA Walkfilter</name>
     <author>Chris Vaughan - Derby and South Derbyshire</author>
-    <creationDate>27 February 2019</creationDate>
+    <creationDate>11 April 2019</creationDate>
     <copyright>Copyright (C) 2019 Ramblers-webs.org.uk</copyright>
     <license>This extension in released under the GNU/GPL License</license>
     <authorEmail>webmaster@ramblers-webs.org.uk</authorEmail>
     <authorUrl>www.ramblers-webs.org.uk</authorUrl>
-    <version>1.0.0</version>
+    <version>0.0.1</version>
     <description>This module enables the filtering of walks</description>
      <updateservers>
         <server type="extension" name="Ramblers Walks Filter Module" priority="1">https://raw.githubusercontent.com/ramblerswebs/updates/master/updates/rafiltermodule.xml</server>
