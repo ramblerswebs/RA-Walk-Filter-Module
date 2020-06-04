@@ -1,14 +1,14 @@
+<div class="ra-walksfilter">
+<div class="ra-filteritem" id="ra_groups"></div>
 
-<div id="ra_groups"></div>
-
-<div><h3 class="ra_openclose">Dates<span class="ra-closed"></span></h3>
+<div class="ra-filteritem"><h3 class="ra_openclose">Dates<span class="ra-closed"></span></h3>
     <div id="ra_filter_dates" class="ra_filter" style="display:none;">
         <span><label>Start Date</label><input id="RA_DateStart" type="date" onchange="javascript:ra_filter(event)"  /></span>
         <span><label>End Date</label><input id="RA_DateEnd" type="date" onchange="javascript:ra_filter(event)"  /></span>
 
     </div></div>
 
-<div><h3 class="ra_openclose">Day of the week<span class="ra-closed"></span></h3>
+<div class="ra-filteritem"><h3 class="ra_openclose">Day of the week<span class="ra-closed"></span></h3>
     <div id="ra_filter_dow" class="ra_filter" style="display:none;">
         <span class='ra_select'>[<span onclick="javascript:ra_select(event)">All</span>] [<span onclick="javascript:ra_select(event)">None</span>]</span>
         <ul>
@@ -21,7 +21,7 @@
             <li><input id="RA_DayOfWeek_6" type="checkbox" onchange="javascript:ra_filter(event)"  /><label>Sunday</label></li>   
         </ul></div></div>
 
-<div><h3 class="ra_openclose">Distance<span class="ra-closed"></span></h3>
+<div class="ra-filteritem"><h3 class="ra_openclose">Distance<span class="ra-closed"></span></h3>
     <div id="ra_filter_distance" class="ra_filter" style="display:none;">
         <span class='ra_select'>[<span onclick="javascript:ra_select(event)">All</span>] [<span onclick="javascript:ra_select(event)">None</span>]</span>
         <ul>
@@ -34,7 +34,7 @@
             <li><input id="RA_Dist_6" type="checkbox" onchange="javascript:ra_filter(event)"  /><label>15+ miles (24 km)</label></li>
         </ul></div></div>
 
-<div><h3 class="ra_openclose">Grade<span class="ra-closed"></span></h3>
+<div class="ra-filteritem"><h3 class="ra_openclose">Grade<span class="ra-closed"></span></h3>
     <div id="ra_filter_difficulty" class="ra_filter" style="display:none;">
         <span class='ra_select'>[<span onclick="javascript:ra_select(event)">All</span>] [<span onclick="javascript:ra_select(event)">None</span>]</span>
         <ul>
@@ -45,3 +45,4 @@
             <li><input id="RA_Diff_s" type="checkbox" onchange="javascript:ra_filter(event)"  /><label><span class='pointer' onclick='javascript:dGH()'>Strenuous</span></label></li>
             <li><input id="RA_Diff_t" type="checkbox" onchange="javascript:ra_filter(event)"  /><label><span class='pointer' onclick='javascript:dGH()'>Technical</span></label></li>
         </ul></div></div>
+</div>
