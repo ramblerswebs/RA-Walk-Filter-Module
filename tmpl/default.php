@@ -101,12 +101,19 @@ if (count($items) > 0) {
     $out.= "ramblerswalksDetails.tableFormat='" . addslashes(json_encode($items)) . "';";
 }
 
+$list = $params->get('DetailsFormat');
+
+if (!empty($list)) {
+    $items = RaProcessItem($list);
+    $out.= "ramblerswalksDetails.detailsFormat='" . addslashes(json_encode($items)) . "';";
+}
 $list = $params->get('ListFormat');
 
 if (!empty($list)) {
     $items = RaProcessItem($list);
     $out.= "ramblerswalksDetails.listFormat='" . addslashes(json_encode($items)) . "';";
 }
+
 $document = JFactory::getDocument();
 $document->addScriptDeclaration("  function addFilterFormats() {" . $out . "};", "text/javascript");
 
