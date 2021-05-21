@@ -17,7 +17,7 @@ $position = $params->get('position');
 if ($position == null) {
     $position = 'In Article, below tabs';
 }
-if ($position == 'In module' or $position==1) {
+if ($position == 'In module' or $position == 1) {
     echo "<div id='js-walksFilterPos1' ></div>";
 }
 $default = $params->get('defaultOption');
@@ -26,7 +26,7 @@ $table = $params->get('Table');
 $list = $params->get('List');
 $map = $params->get('Map');
 $leaders = $params->get('Leaders');
-$diagnostics= $params->get('diagnostics');
+$diagnostics = $params->get('diagnostics');
 
 $options = new stdClass();
 $options->filterPosition = $position;
@@ -55,6 +55,8 @@ foreach ($colheaders as $colheader) {
 }
 if (count($items) > 0) {
     $options->tableFormat = $items;
+} else {
+    $options->tableFormat = null;
 }
 $options->detailsFormat = $params->get('DetailsFormat');
 $options->listFormat = $params->get('ListFormat');
