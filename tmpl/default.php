@@ -9,154 +9,56 @@
  * @license	http://www.gnu.org/licenses/gpl.html GNU/GPL
  */
 defined('_JEXEC') or die('Restricted access');
-// Add a reference to a CSS file
-// The default path is 'media/system/css/'
+
 $colheaders = ["Col1Head", "Col2Head", "Col3Head", "Col4Head", "Col5Head", "Col6Head", "Col7Head", "Col8Head", "Col9Head"];
 $colvalues = ["Col1", "Col2", "Col3", "Col4", "Col5", "Col6", "Col7", "Col8", "Col9"];
 
-$filterhtml = file_get_contents("modules/mod_rawalkfilter/tmpl/filter.html");
-echo $filterhtml;
-
+$position = $params->get('position');
+if ($position == null) {
+    $position = 'In Article, below tabs';
+}
+if ($position == 'In module' or $position==1) {
+    echo "<div id='js-walksFilterPos1' ></div>";
+}
 $default = $params->get('defaultOption');
 $details = $params->get('Details');
 $table = $params->get('Table');
 $list = $params->get('List');
 $map = $params->get('Map');
 $leaders = $params->get('Leaders');
-$select = false;
-if ($details) {
-    $select = true;
-}
-if ($table) {
-    $select = true;
-}
-if ($list) {
-    $select = true;
-}
-if ($map) {
-    $select = true;
-}
-switch ($default) {
-    case "Details":
-        $details = false;
-        break;
-    case "Table":
-        $table = false;
-        break;
-    case "List":
-        $list = false;
-        break;
-    case "Map":
-        $map = false;
-        break;
-    case "Leaders":
-        $leaders = false;
-        break;
+$diagnostics= $params->get('diagnostics');
 
+$options = new stdClass();
+$options->filterPosition = $position;
+$options->defaultView = $default;
+$options->detailsView = $details == "1";
+$options->tableView = $table == "1";
+$options->listView = $list == "1";
+$options->mapView = $map == "1";
+$options->contactsView = $leaders == "1";
+$options->diagnostics = $diagnostics === "1";
 
-        break;
-
-    default:
-        break;
-}
-
-if ($select) {
-    echo "<div id='raDisplayOptions'>";
-    echo "<table><tr>";
-    RaDisplayOption($default, $default);
-    if ($details) {
-        RaDisplayOption("Details", "Details");
-    }
-    if ($table) {
-        RaDisplayOption("Table", "Table");
-    }
-    if ($list) {
-        RaDisplayOption("List", "List");
-    }
-    if ($map) {
-        RaDisplayOption("Map", "Map");
-    }
-    if ($leaders) {
-        RaDisplayOption("Contacts", "Contacts");
-    }
-    echo "</tr></table></div>";
-}
 $i = 0;
 $items = [];
 foreach ($colheaders as $colheader) {
     $header = $params->get($colheader);
     $colvalue = $colvalues[$i];
-    $values = RaProcessItem($params->get($colvalue));
+    //   $values = RaProcessItem($params->get($colvalue));
+    $values = $params->get($colvalue);
     if ($header != "") {
-        $item = new ra_item;
+        $item = new stdClass();
         $item->title = $header;
         $item->items = $values;
         $items[] = $item;
     }
-    $i+=1;
+    $i += 1;
 }
-$out = "";
-$out.="ramblerswalksDetails.displayDefault='" . $default . "';";
 if (count($items) > 0) {
-    $out.= "ramblerswalksDetails.tableFormat='" . addslashes(json_encode($items)) . "';";
+    $options->tableFormat = $items;
 }
+$options->detailsFormat = $params->get('DetailsFormat');
+$options->listFormat = $params->get('ListFormat');
 
-$list = $params->get('DetailsFormat');
-
-if (!empty($list)) {
-    $items = RaProcessItem($list);
-    $out.= "ramblerswalksDetails.detailsFormat='" . addslashes(json_encode($items)) . "';";
-}
-$list = $params->get('ListFormat');
-
-if (!empty($list)) {
-    $items = RaProcessItem($list);
-    $out.= "ramblerswalksDetails.listFormat='" . addslashes(json_encode($items)) . "';";
-}
-
+$out = "return'" . addslashes(json_encode($options)) . "';";
 $document = JFactory::getDocument();
 $document->addScriptDeclaration("  function addFilterFormats() {" . $out . "};", "text/javascript");
-
-function RaDisplayOption($title, $value) {
-    echo "<td class='ra-tab' id='" . $value . "' onclick=\"javascript:ra_format('" . $value . "')\">" . $title . "</td>";
-}
-
-function RaProcessItem($value) {
-    $items = [];
-    $item = "";
-    $array = str_split($value);
-    $inBracket = false;
-    foreach ($array as $char) {
-        switch ($char):
-            case "{":
-                if ($item != "") {
-                    $items[] = $item;
-                }
-                $item.=$char;
-                $inBracket = true;
-                break;
-            case "}":
-                If ($inBracket) {
-                    $item.=$char;
-                    $items[] = $item;
-                    $item = "";
-                } else {
-                    $item.=$char;
-                }
-                break;
-            default:
-                $item.=$char;
-        endswitch;
-    }
-
-    return $items;
-}
-
-class ra_item {
-
-    public $title = "";
-    public $items = [];
-
-}
-
-// end

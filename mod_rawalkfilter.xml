@@ -2,14 +2,14 @@
 <extension type="module" version="3.0" client="site" method="upgrade">
     <name>RA Walkfilter</name>
     <author>Chris Vaughan - Derby and South Derbyshire</author>
-    <creationDate>4 June 2020</creationDate>
-    <copyright>Copyright (C) 2020 Ramblers-webs.org.uk</copyright>
+    <creationDate>21 May 2021</creationDate>
+    <copyright>Copyright (C) 2021 Ramblers-webs.org.uk</copyright>
     <license>This extension in released under the GNU/GPL License</license>
     <authorEmail>webmaster@ramblers-webs.org.uk</authorEmail>
     <authorUrl>www.ramblers-webs.org.uk</authorUrl>
-    <version>0.0.8</version>
+    <version>1.0.0</version>
     <description>This module enables users to filter of walk when using RJsonwalksStdDisplay class</description>
-     <updateservers>
+    <updateservers>
         <server type="extension" name="Ramblers Walks Filter Module" priority="1">https://raw.githubusercontent.com/ramblerswebs/updates/master/updates/rafiltermodule.xml</server>
     </updateservers>
     <files>
@@ -24,17 +24,21 @@
     <config>
         <fields name="params">
             <fieldset name="basic">
-                <field name="Details" type="checkbox" label="Allow Details display" description="Allow Details Format" value="1"  />
-                <field name="Table" type="checkbox" label="Allow Table display" description="Allow Table Format" value="1"  />
-                <field name="List" type="checkbox" label="Allow List display" description="Allow List Format" value="1"  />
-                <field name="Map" type="checkbox" label="Allow Map display"  description="Allow Map display" value="1"  />
-                <field name="Leaders" type="checkbox" label="Allow Contacts List"  description="Allow display of Contacts" value="1" />
+                <field name="position" type="list" default="In Article, below tabs" label="Where to display filter" description="Select where to display filter" size="10">
+                    <option value="1">In module</option>
+                    <option value="2">In Article, above tabs</option>
+                    <option value="3">In Article, below tabs</option>             
+                </field>  
+                <field name="Details" type="checkbox" label="Display Details view" description="Display Details view of walks" value="1"  />
+                <field name="Table" type="checkbox" label="Display Table view" description="Display Table view of walks" value="1"  />
+                <field name="List" type="checkbox" label="Display List view" description="Display List view of walks" value="1"  />
+                <field name="Map" type="checkbox" label="Display Map view"  description="Display Map view of walks" value="1"  />
+                <field name="Leaders" type="checkbox" label="Display Contacts view"  description="Display list of Contacts" value="1" />
                 <field name="defaultOption" type="combo" default="Details" label="Default display" description="Default display" size="10">
                     <option value="Details">Details</option>
                     <option value="Table">Table</option>
                     <option value="List">List</option>
                     <option value="Map">Map</option>
-                    <option value="Leaders">Leaders</option>
                 </field>              
                 <field name="diagnostics" type="radio" default="1" label="Display diagnostic information">
                     <option value="1">Yes</option> 
@@ -73,7 +77,7 @@
             <fieldset name="Instructions">       
                 <field name="note01" type="note" label="For full details on how to format each display type please visit:" />
                 <field name="note02" type="note" label="https://ramblers-webs.org.uk" />
-                </fieldset>
+            </fieldset>
             <fieldset name="advanced">
                 <field
                     name="moduleclass_sfx"
