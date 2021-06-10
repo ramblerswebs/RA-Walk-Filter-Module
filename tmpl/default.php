@@ -13,13 +13,6 @@ defined('_JEXEC') or die('Restricted access');
 $colheaders = ["Col1Head", "Col2Head", "Col3Head", "Col4Head", "Col5Head", "Col6Head", "Col7Head", "Col8Head", "Col9Head"];
 $colvalues = ["Col1", "Col2", "Col3", "Col4", "Col5", "Col6", "Col7", "Col8", "Col9"];
 
-$position = $params->get('position');
-if ($position == null) {
-    $position = 'In Article, below tabs';
-}
-if ($position == 'In module' or $position == 1) {
-    echo "<div id='js-walksFilterPos1' ></div>";
-}
 $default = $params->get('defaultOption');
 $details = $params->get('Details');
 $table = $params->get('Table');
@@ -29,7 +22,6 @@ $leaders = $params->get('Leaders');
 $diagnostics = $params->get('diagnostics');
 
 $options = new stdClass();
-$options->filterPosition = $position;
 $options->defaultView = $default;
 $options->detailsView = $details == "1";
 $options->tableView = $table == "1";
@@ -63,4 +55,4 @@ $options->listFormat = $params->get('ListFormat');
 
 $out = "return'" . addslashes(json_encode($options)) . "';";
 $document = JFactory::getDocument();
-$document->addScriptDeclaration("  function addFilterFormats() {" . $out . "};", "text/javascript");
+$document->addScriptDeclaration("function addFilterFormats() {" . $out . "};", "text/javascript");

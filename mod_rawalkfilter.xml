@@ -24,11 +24,6 @@
     <config>
         <fields name="params">
             <fieldset name="basic">
-                <field name="position" type="list" default="In Article, below tabs" label="Where to display filter" description="Select where to display filter" size="10">
-                    <option value="1">In module</option>
-                    <option value="2">In Article, above tabs</option>
-                    <option value="3">In Article, below tabs</option>             
-                </field>  
                 <field name="Details" type="checkbox" label="Display Details view" description="Display Details view of walks" value="1"  />
                 <field name="Table" type="checkbox" label="Display Table view" description="Display Table view of walks" value="1"  />
                 <field name="List" type="checkbox" label="Display List view" description="Display List view of walks" value="1"  />
