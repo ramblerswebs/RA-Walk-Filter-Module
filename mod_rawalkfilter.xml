@@ -2,7 +2,7 @@
 <extension type="module" version="3.0" client="site" method="upgrade">
     <name>RA Walkfilter</name>
     <author>Chris Vaughan - Derby and South Derbyshire</author>
-    <creationDate>21 May 2021</creationDate>
+    <creationDate>21 June 2021</creationDate>
     <copyright>Copyright (C) 2021 Ramblers-webs.org.uk</copyright>
     <license>This extension in released under the GNU/GPL License</license>
     <authorEmail>webmaster@ramblers-webs.org.uk</authorEmail>
